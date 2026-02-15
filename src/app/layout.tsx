@@ -40,6 +40,7 @@ export default function RootLayout({
             <div className="flex gap-6 font-lato">
               <a href="/" className="hover:text-amber-200 transition">Home</a>
               <a href="/reviews" className="hover:text-amber-200 transition">Reviews</a>
+              <a href="/buying-guides" className="hover:text-amber-200 transition">Buying Guides</a>
             </div>
           </nav>
         </header>
