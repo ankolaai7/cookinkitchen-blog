@@ -10,6 +10,7 @@ const reviews = [
     rating: 4.8,
     date: "Feb 10, 2026",
     image: "🔪",
+    affiliateLink: "https://amzn.to/EXAMPLE-knife",
     content: `
 ## The Search for the Perfect Blade
 
@@ -39,6 +40,7 @@ For those on a budget, the Victorinox Swiss Classic offers incredible value. It'
     rating: 4.5,
     date: "Feb 8, 2026",
     image: "🍳",
+    affiliateLink: "https://amzn.to/EXAMPLE-castiron",
     content: `
 ## The Showdown
 
@@ -68,6 +70,7 @@ For most home cooks, carbon steel offers the best balance of performance and usa
     rating: 4.3,
     date: "Feb 5, 2026",
     image: "🫕",
+    affiliateLink: "https://amzn.to/EXAMPLE-instantpot",
     content: `
 ## Multicooker Madness
 
@@ -97,6 +100,7 @@ For traditional pressure cooking, the Instant Pot wins. For versatility and air-
     rating: 4.7,
     date: "Feb 2, 2026",
     image: "🥣",
+    affiliateLink: "https://amzn.to/EXAMPLE-mixer",
     content: `
 ## Mixing It Up
 
@@ -182,16 +186,21 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
           </div>
           
           {/* Affiliate CTA */}
-          <div className="mt-12 bg-orange-50 rounded-xl p-6">
+          <div className="mt-12 bg-orange-50 rounded-xl p-6 border border-orange-200">
             <h3 className="font-playfair text-xl text-stone-800 mb-3">
-              Ready to Buy?
+              🔪 Buy on Amazon
             </h3>
             <p className="font-lato text-stone-600 mb-4">
-              We may earn a commission when you buy through links on our site.
+              We may earn a commission when you buy through our links — at no extra cost to you.
             </p>
-            <button className="bg-orange-600 text-white px-6 py-3 rounded-lg font-lato font-bold hover:bg-orange-700 transition">
-              Check Prices on Amazon
-            </button>
+            <a 
+              href={review.affiliateLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-lato font-bold hover:bg-orange-700 transition"
+            >
+              Shop Now on Amazon →
+            </a>
           </div>
         </article>
       </div>

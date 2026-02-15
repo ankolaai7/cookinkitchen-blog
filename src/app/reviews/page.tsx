@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 const reviews = [
   {
@@ -43,7 +46,25 @@ const reviews = [
   },
 ];
 
+const categories = ["All", "Knives", "Cookware", "Appliances"];
+
 export default function ReviewsPage() {
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+
+  const filteredReviews = activeCategory === "All" 
+    ? reviews 
+    : reviews.filter(r => r.category === activeCategory);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      setSubscribed(true);
+      setEmail("");
+    }
+  };
+
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-6xl mx-auto px-4">
@@ -58,9 +79,26 @@ export default function ReviewsPage() {
           </p>
         </div>
 
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-4 py-2 rounded-full font-lato text-sm transition ${
+                activeCategory === cat
+                  ? "bg-orange-600 text-white"
+                  : "bg-stone-100 text-stone-600 hover:bg-stone-200"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
         {/* Reviews Grid */}
         <div className="grid md:grid-cols-2 gap-8">
-          {reviews.map((review) => (
+          {filteredReviews.map((review) => (
             <article 
               key={review.id}
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
@@ -94,24 +132,46 @@ export default function ReviewsPage() {
           ))}
         </div>
 
+        {filteredReviews.length === 0 && (
+          <p className="text-center text-stone-500 font-lato py-8">
+            No reviews in this category yet.
+          </p>
+        )}
+
         {/* Newsletter CTA */}
         <div className="mt-16 bg-orange-50 rounded-2xl p-8 text-center">
-          <h3 className="font-playfair text-2xl text-stone-800 mb-4">
-            Want New Reviews First?
-          </h3>
-          <p className="font-lato text-stone-600 mb-6">
-            Subscribe to get the latest kitchen gear reviews delivered to your inbox.
-          </p>
-          <div className="flex gap-2 justify-center">
-            <input 
-              type="email" 
-              placeholder="your@email.com" 
-              className="px-4 py-2 rounded-lg border border-stone-300 font-lato w-64"
-            />
-            <button className="bg-orange-600 text-white px-6 py-2 rounded-lg font-lato font-bold hover:bg-orange-700 transition">
-              Subscribe
-            </button>
-          </div>
+          {subscribed ? (
+            <div className="py-4">
+              <h3 className="font-playfair text-2xl text-green-700 mb-2">
+                🎉 You're in!
+              </h3>
+              <p className="font-lato text-stone-600">
+                Thanks for subscribing. Check your inbox for updates.
+              </p>
+            </div>
+          ) : (
+            <>
+              <h3 className="font-playfair text-2xl text-stone-800 mb-4">
+                Want New Reviews First?
+              </h3>
+              <p className="font-lato text-stone-600 mb-6">
+                Subscribe to get the latest kitchen gear reviews delivered to your inbox.
+              </p>
+              <form onSubmit={handleSubscribe} className="flex gap-2 justify-center">
+                <input 
+                  type="email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com" 
+                  required
+                  className="px-4 py-2 rounded-lg border border-stone-300 font-lato w-64"
+                />
+                <button type="submit" className="bg-orange-600 text-white px-6 py-2 rounded-lg font-lato font-bold hover:bg-orange-700 transition">
+                  Subscribe
+                </button>
+              </form>
+            </>
+          )}
         </div>
       </div>
     </div>
