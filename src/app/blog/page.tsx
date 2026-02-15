@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const blogPosts = [
   {
     slug: "how-to-choose-knife",
@@ -125,22 +127,25 @@ export default function BlogPage() {
 
         {/* Blog Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map((post) => (
-            <article 
+          {blogPosts.map((post, idx) => (
+            <Link
               key={post.slug}
-              className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden"
+              href={`/blog/${post.slug}`}
+              className="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-amber-300 transform hover:-translate-y-2 cursor-pointer"
+              style={{animationDelay: `${idx * 0.05}s`}}
             >
-              <div className="bg-gradient-to-br from-emerald-50 to-gray-100 p-6 text-center">
-                <div className="text-5xl">{post.image}</div>
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-6 text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                <div className="text-5xl group-hover:scale-110 transition-transform duration-300">{post.image}</div>
               </div>
               <div className="p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-medium">
+                  <span className="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-bold">
                     {post.category}
                   </span>
                   <span className="text-xs text-stone-400">{post.readTime}</span>
                 </div>
-                <h2 className="font-semibold text-lg text-stone-900 mb-2">
+                <h2 className="font-bold text-lg text-stone-900 mb-2 group-hover:text-amber-600 transition-colors duration-300">
                   {post.title}
                 </h2>
                 <p className="text-stone-500 text-sm mb-4 line-clamp-2">
@@ -148,21 +153,21 @@ export default function BlogPage() {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-stone-400">{post.date}</span>
-                  <span className="text-emerald-600 text-sm font-medium hover:underline cursor-pointer">
+                  <span className="inline-flex items-center gap-1 text-emerald-600 text-sm font-bold group-hover:translate-x-1 transition-transform duration-300">
                     Read More →
                   </span>
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
 
         {/* Newsletter CTA */}
-        <div className="mt-16 bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-2xl p-8 text-center text-white">
+        <div className="mt-16 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl p-8 text-center text-white">
           <h3 className="text-2xl font-bold mb-4">
             Get Kitchen Tips Weekly!
           </h3>
-          <p className="text-emerald-100 mb-6 max-w-lg mx-auto">
+          <p className="text-amber-100 mb-6 max-w-lg mx-auto">
             Join 10,000+ home cooks getting our best tips and recipes every week.
           </p>
           <div className="flex gap-2 justify-center max-w-md mx-auto">
@@ -171,7 +176,7 @@ export default function BlogPage() {
               placeholder="Enter your email" 
               className="px-4 py-3 rounded-lg text-stone-900 w-full max-w-xs"
             />
-            <button className="bg-stone-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition">
+            <button className="bg-stone-900 text-white px-6 py-3 rounded-lg font-bold hover:bg-stone-800 transition">
               Subscribe
             </button>
           </div>
