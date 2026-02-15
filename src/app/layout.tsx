@@ -1,29 +1,17 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lato } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
-
-const lato = Lato({
-  variable: "--font-lato",
-  weight: ["400", "700"],
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "CookinKitchen - Your Kitchen Companion",
-  description: "Discover recipes, cooking tools, and kitchen essentials. Expert reviews and recommendations for home cooks.",
-  keywords: ["cooking", "kitchen", "recipes", "kitchen tools", "cookware", "reviews"],
+  title: "CookinKitchen - Kitchen Tool Reviews",
+  description: "Honest reviews of kitchen tools that actually work.",
   icons: {
     icon: "/favicon.svg",
-  },
-  openGraph: {
-    title: "CookinKitchen - Your Kitchen Companion",
-    description: "Discover recipes, cooking tools, and kitchen essentials.",
-    type: "website",
   },
 };
 
@@ -35,22 +23,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${lato.variable} antialiased bg-amber-50`}
+        className={`${inter.variable} font-sans antialiased bg-gray-50 text-gray-900`}
       >
-        <header className="bg-gradient-to-r from-orange-700 to-amber-600 text-white shadow-lg">
-          <nav className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="/" className="font-playfair text-2xl font-bold">CookinKitchen</a>
-            <div className="flex gap-6 font-lato">
-              <a href="/" className="hover:text-amber-200 transition">Home</a>
-              <a href="/reviews" className="hover:text-amber-200 transition">Reviews</a>
-              <a href="/buying-guides" className="hover:text-amber-200 transition">Buying Guides</a>
+        <header className="bg-white border-b border-gray-200">
+          <nav className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" className="font-bold text-xl">🍳 CookinKitchen</a>
+            <div className="flex gap-6 text-sm font-medium">
+              <a href="/" className="text-gray-600 hover:text-orange-600 transition">Home</a>
+              <a href="/reviews" className="text-gray-600 hover:text-orange-600 transition">Reviews</a>
+              <a href="/buying-guides" className="text-gray-600 hover:text-orange-600 transition">Guides</a>
             </div>
           </nav>
         </header>
         <main>{children}</main>
-        <footer className="bg-stone-800 text-stone-300 py-8 mt-16">
-          <div className="max-w-6xl mx-auto px-4 text-center font-lato">
-            <p>&copy; 2026 CookinKitchen. Made with ❤️ for home cooks.</p>
+        <footer className="bg-gray-900 text-gray-400 py-8 mt-16">
+          <div className="max-w-5xl mx-auto px-6 text-center text-sm">
+            <p>© 2026 CookinKitchen. Built for home cooks.</p>
           </div>
         </footer>
       </body>
