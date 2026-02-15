@@ -8,6 +8,7 @@ const featuredProducts = [
     image: "🔪",
     slug: "best-chef-knives-home-cooks",
     badge: "Best Seller",
+    amazonLink: "https://amzn.to/4rPdEWZ",
   },
   {
     name: "Le Creuset Dutch Oven",
@@ -15,7 +16,8 @@ const featuredProducts = [
     rating: 4.9,
     image: "🥄",
     slug: "best-dutch-oven",
-    badge: "Premium",
+    badge: "Premium Pick",
+    amazonLink: "https://amzn.to/3MG2mFH",
   },
   {
     name: "KitchenAid Stand Mixer",
@@ -23,6 +25,7 @@ const featuredProducts = [
     rating: 4.8,
     image: "🥣",
     slug: "kitchenaid-vs-cuisinart-stand-mixer",
+    amazonLink: "#",
   },
   {
     name: "Shun Santoku Knife",
@@ -31,6 +34,7 @@ const featuredProducts = [
     image: "🔪",
     slug: "best-santoku-knife",
     badge: "Japanese",
+    amazonLink: "#",
   },
   {
     name: "Vitamix 5200 Blender",
@@ -38,6 +42,7 @@ const featuredProducts = [
     rating: 4.8,
     image: "🫗",
     slug: "best-blender-2026",
+    amazonLink: "#",
   },
   {
     name: "Ninja Air Fryer XXL",
@@ -45,6 +50,7 @@ const featuredProducts = [
     rating: 4.6,
     image: "🍟",
     slug: "best-air-fryer",
+    amazonLink: "#",
   },
 ];
 
@@ -98,9 +104,9 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero */}
       <section className="bg-gray-900 text-white">
-        <div className="max-w-6xl mx py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
           <div className="text-center">
-            <div className="text-6xl-auto px-6 mb-6">🍳</div>
+            <div className="text-6xl mb-6">🍳</div>
             <h1 className="font-bold text-4xl md:text-5xl mb-4 tracking-tight">
               CookinKitchen
             </h1>
@@ -112,7 +118,7 @@ export default function Home() {
                 href="#products" 
                 className="bg-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-600 transition shadow-lg"
               >
-                Shop Top Rated
+                🛒 Shop on Amazon
               </Link>
               <Link 
                 href="#reviews" 
@@ -121,42 +127,52 @@ export default function Home() {
                 Read Reviews
               </Link>
             </div>
+            <p className="text-xs text-gray-500 mt-4">
+              Amazon Associate — We earn from qualifying purchases
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Featured Products */}
+      {/* Featured Products - Amazon Priority */}
       <section id="products" className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            Top Rated Kitchen Tools
-          </h2>
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-2xl font-bold text-gray-900">
+              🛒 Top Rated on Amazon
+            </h2>
+            <span className="text-emerald-600 text-sm font-medium">Verified Picks</span>
+          </div>
           <p className="text-gray-500 mb-8">
-            Hand-picked products we use and recommend
+            Hand-picked products with the best reviews — click to shop on Amazon
           </p>
           
           <div className="grid md:grid-cols-3 gap-6">
             {featuredProducts.map((product) => (
               <div key={product.name} className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="bg-gray-100 p-8 text-center text-5xl">{product.image}</div>
+                <div className="bg-gradient-to-br from-emerald-50 to-gray-100 p-8 text-center">
+                  <div className="text-6xl">{product.image}</div>
+                </div>
                 <div className="p-5">
                   {product.badge && (
-                    <span className="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-2 py-1 rounded-full mb-2">
+                    <span className="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-2 py-1 rounded-full mb-2">
                       {product.badge}
                     </span>
                   )}
                   <h3 className="font-semibold text-lg text-gray-900 mb-1">{product.name}</h3>
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="text-amber-500">⭐ {product.rating}</span>
+                    <span className="text-amber-400">★ {product.rating}</span>
                     <span className="text-gray-400">•</span>
-                    <span className="font-bold text-emerald-600">{product.price}</span>
+                    <span className="font-bold text-emerald-600 text-lg">{product.price}</span>
                   </div>
-                  <Link 
-                    href={`/reviews/${product.slug}`}
-                    className="block w-full bg-gray-900 text-white text-center py-2 rounded-lg font-medium hover:bg-gray-800 transition"
+                  <a 
+                    href={product.amazonLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-emerald-500 text-white text-center py-3 rounded-lg font-semibold hover:bg-emerald-600 transition flex items-center justify-center gap-2"
                   >
-                    View Details
-                  </Link>
+                    🛒 Buy on Amazon
+                  </a>
                 </div>
               </div>
             ))}
@@ -164,7 +180,7 @@ export default function Home() {
           
           <div className="text-center mt-8">
             <Link href="/buying-guides" className="text-emerald-600 font-medium hover:underline">
-              View all products →
+              View all products on Amazon →
             </Link>
           </div>
         </div>
@@ -191,7 +207,7 @@ export default function Home() {
                   <span className="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded-full">
                     {review.category}
                   </span>
-                  <span className="text-amber-500 text-sm font-medium">⭐ {review.rating}</span>
+                  <span className="text-emerald-600 text-sm font-medium">★ {review.rating}</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">{review.title}</h3>
                 <p className="text-gray-500 text-sm line-clamp-2">{review.excerpt}</p>
@@ -204,9 +220,19 @@ export default function Home() {
           
           <div className="text-center mt-8">
             <Link href="/reviews" className="inline-block bg-emerald-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-emerald-700 transition">
-              View All Reviews
+              View All {reviews.length}+ Reviews
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Amazon Disclosure */}
+      <section className="py-8 bg-gray-100">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="text-sm text-gray-500">
+            🔍 <strong>Our Promise:</strong> We independently test all products. When you buy through our links, 
+            we may earn a commission at no extra cost to you. This helps support our work.
+          </p>
         </div>
       </section>
 
@@ -214,7 +240,7 @@ export default function Home() {
       <section className="py-16 bg-gray-900 text-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl font-bold mb-4">
-            Want us to review a product?
+            Need product recommendations?
           </h2>
           <p className="text-gray-400 mb-6">
             We're always testing new kitchen tools. Let us know what you'd like to see next.

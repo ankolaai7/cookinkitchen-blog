@@ -87,9 +87,10 @@ export default function RootLayout({
           <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <Link href="/" className="font-bold text-xl">🍳 CookinKitchen</Link>
             <div className="flex gap-6 text-sm font-medium">
-              <Link href="/" className="text-gray-600 hover:text-orange-600 transition">Home</Link>
-              <Link href="/reviews" className="text-gray-600 hover:text-orange-600 transition">Reviews</Link>
-              <Link href="/buying-guides" className="text-gray-600 hover:text-orange-600 transition">Guides</Link>
+              <Link href="/" className="text-gray-600 hover:text-emerald-600 transition">Home</Link>
+              <Link href="/reviews" className="text-gray-600 hover:text-emerald-600 transition">Reviews</Link>
+              <Link href="/blog" className="text-gray-600 hover:text-emerald-600 transition">Blog</Link>
+              <Link href="/buying-guides" className="text-gray-600 hover:text-emerald-600 transition">Guides</Link>
             </div>
           </nav>
         </header>
