@@ -126,8 +126,8 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ReviewPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = params;
+export default async function ReviewPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const review = reviews.find((r) => r.slug === slug);
   
   if (!review) {
