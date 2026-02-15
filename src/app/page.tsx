@@ -23,8 +23,8 @@ const featuredTools = [
   },
 ];
 
-() {
-  returnexport default function Home (
+export default function Home() {
+  return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-orange-100 to-amber-50 py-20">
