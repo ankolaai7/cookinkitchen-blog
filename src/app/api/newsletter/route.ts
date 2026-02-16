@@ -17,7 +17,8 @@ export async function POST(request: Request) {
     });
   }
 
-  const dc = API_KEY.split('-')[1] || 'us6';
+  // API key format: key-usX (e.g., 28f8fa...-us6)
+  const dc = API_KEY.includes('-') ? API_KEY.split('-')[1] : 'us6';
   const url = `https://${dc}.api.mailchimp.com/3.0/lists/${LIST_ID}/members`;
   const auth = Buffer.from('anystring:' + API_KEY).toString('base64');
 
