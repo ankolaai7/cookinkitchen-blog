@@ -291,16 +291,36 @@ const categoryIcons: Record<string, string> = {
 };
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const filteredReviews = activeCategory === "All" 
     ? reviews 
     : reviews.filter(r => r.category === activeCategory);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail("");
+    setLoading(true);
+    setError("");
+    
+    try {
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      
+      if (res.ok) {
+        setSubscribed(true);
+        setEmail("");
+      } else {
+        const data = await res.json();
+        setError(data.message || 'Something went wrong');
+      }
+    } catch (err) {
+      setError('Failed to subscribe');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -403,12 +423,14 @@ const categoryIcons: Record<string, string> = {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email" 
                   required
-                  className="px-4 py-3 rounded-lg text-stone-900 w-full max-w-xs"
+                  disabled={loading}
+                  className="px-4 py-3 rounded-lg text-stone-900 w-full max-w-xs disabled:opacity-50"
                 />
-                <button type="submit" className="bg-stone-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition">
-                  Subscribe
+                <button type="submit" disabled={loading} className="bg-stone-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition disabled:opacity-50">
+                  {loading ? '...' : 'Subscribe'}
                 </button>
               </form>
+              {error && <p className="text-red-200 mt-2">{error}</p>}
               <p className="text-xs text-emerald-200 mt-3">
                 We respect your privacy. Unsubscribe anytime.
               </p>

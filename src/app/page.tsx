@@ -292,6 +292,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Newsletter */}
+      <section className="py-12 bg-emerald-50">
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <h2 className="text-2xl font-bold text-stone-900 mb-3">
+            Get New Reviews First!
+          </h2>
+          <p className="text-stone-600 mb-6">
+            Subscribe to get the latest kitchen gear reviews delivered to your inbox.
+          </p>
+          <form method="POST" action="/api/newsletter" className="flex gap-2 justify-center max-w-md mx-auto">
+            <input 
+              type="email" 
+              name="email"
+              placeholder="Enter your email" 
+              required
+              className="px-4 py-3 rounded-lg text-stone-900 w-full max-w-xs"
+            />
+            <button type="submit" className="bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition">
+              Subscribe
+            </button>
+          </form>
+          <p className="text-xs text-stone-500 mt-3">
+            We respect your privacy. Unsubscribe anytime.
+          </p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-stone-900 text-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
