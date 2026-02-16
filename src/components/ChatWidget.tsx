@@ -59,6 +59,17 @@ export default function ChatWidget() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  const formatMessage = (content: string) => {
+    // Simple markdown-like formatting
+    return content
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>')
+      .replace(/^- (.+)$/gm, '<li>$1</li>')
+      .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
+      .replace(/\n\n/g, '<br/><br/>')
+      .replace(/\n/g, '<br/>');
+  };
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -151,13 +162,17 @@ export default function ChatWidget() {
                 className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-[85%] p-3 rounded-lg text-sm ${
+                  className={`max-w-[85%] p-3 rounded-lg text-sm whitespace-pre-wrap ${
                     msg.role === "user"
                       ? "bg-gradient-to-r from-teal-600 to-cyan-600 text-white"
                       : "bg-white border border-gray-200 text-gray-800"
                   }`}
                 >
-                  {msg.content}
+                  {msg.role === "assistant" ? (
+                    <div dangerouslySetInnerHTML={{ __html: formatMessage(msg.content) }} />
+                  ) : (
+                    msg.content
+                  )}
                 </div>
               </div>
             ))}
