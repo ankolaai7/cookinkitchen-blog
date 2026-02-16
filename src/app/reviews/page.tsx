@@ -13,7 +13,7 @@ const reviews = [
     rating: 4.8,
     date: "Feb 10, 2026",
     image: "🔪",
-    amazonLink: "https://amzn.to/4rPdEWZ",
+    amazonLink: "https://www.amazon.com/Victorinox-Fibrox-Pro-Chefs-Knife/dp/B001NBTV2A?tag=cookinkitchen-20",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const reviews = [
     rating: 4.5,
     date: "Feb 8, 2026",
     image: "🍳",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/Lodge-Cast-Iron-Skillet-12-inch/dp/B00006JSUA?tag=cookinkitchen-20",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const reviews = [
     rating: 4.3,
     date: "Feb 5, 2026",
     image: "🫕",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/Instant-Pot-Duo-Electric-Pressure/dp/B00FLBUERN?tag=cookinkitchen-20",
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const reviews = [
     rating: 4.7,
     date: "Feb 2, 2026",
     image: "🥣",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/KitchenAid-KSM150PSER-Artisan-Tilt-Head-5-Quart/dp/B00005UP77?tag=cookinkitchen-20",
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const reviews = [
     rating: 4.6,
     date: "Jan 28, 2026",
     image: "🥘",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/T-fal-E93808-Professional-Nonstick-Dishwasher/dp/B000W5XHQW?tag=cookinkitchen-20",
   },
   {
     id: 6,
@@ -79,7 +79,7 @@ const reviews = [
     rating: 4.4,
     date: "Jan 20, 2026",
     image: "⚖️",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/OXO-Stainless-Compact-Grip-11-Pound/dp/B079D9F86W?tag=cookinkitchen-20",
   },
   {
     id: 8,
@@ -90,7 +90,7 @@ const reviews = [
     rating: 4.5,
     date: "Jan 15, 2026",
     image: "🪵",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/OXO-GOOD-Grips-Cutting-17-Inch/dp/B00E6GUF5W?tag=cookinkitchen-20",
   },
   {
     id: 9,
@@ -101,7 +101,7 @@ const reviews = [
     rating: 4.7,
     date: "Jan 12, 2026",
     image: "🔪",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/Shun-DM0706-Classic-7-Inch-Santoku/dp/B0000Y7LYM?tag=cookinkitchen-20",
   },
   {
     id: 10,
@@ -112,7 +112,7 @@ const reviews = [
     rating: 4.5,
     date: "Jan 10, 2026",
     image: "🫗",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/Ninja-BL610-Professional-72-Watt-Blender/dp/B00NG5H436?tag=cookinkitchen-20",
   },
   {
     id: 11,
@@ -123,7 +123,7 @@ const reviews = [
     rating: 4.6,
     date: "Jan 8, 2026",
     image: "☕",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/Technivorm-Moccamaster-10-Cup-Coffee-Brewer/dp/B07CM5H7BQ?tag=cookinkitchen-20",
   },
   {
     id: 12,
@@ -134,7 +134,7 @@ const reviews = [
     rating: 4.4,
     date: "Jan 5, 2026",
     image: "🍟",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/Ninja-Digital-4-Quart-Recipe-Creator/dp/B09GB5JTRY?tag=cookinkitchen-20",
   },
   {
     id: 13,
@@ -145,7 +145,7 @@ const reviews = [
     rating: 4.3,
     date: "Jan 3, 2026",
     image: "⚡",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/ChefsChoice-15-Inch-Conventional-Sharpener/dp/B00004S7I8?tag=cookinkitchen-20",
   },
   {
     id: 14,
@@ -156,7 +156,7 @@ const reviews = [
     rating: 4.2,
     date: "Jan 1, 2026",
     image: "🥣",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/Stainless-Steel-Measuring-Cups/dp/B000W5IYG0?tag=cookinkitchen-20",
   },
   {
     id: 15,
@@ -167,7 +167,7 @@ const reviews = [
     rating: 4.4,
     date: "Dec 28, 2025",
     image: "🧪",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/OXO-GOOD-Grips-Measuring-Cups/dp/B00GE6NF6G?tag=cookinkitchen-20",
   },
   {
     id: 16,
@@ -178,7 +178,7 @@ const reviews = [
     rating: 4.5,
     date: "Dec 25, 2025",
     image: "🥄",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/Stainless-Steel-Spatula-Set-Utensil/dp/B07XJ8C8F5?tag=cookinkitchen-20",
   },
   {
     id: 17,
@@ -189,7 +189,7 @@ const reviews = [
     rating: 4.7,
     date: "Dec 22, 2025",
     image: "🍳",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/All-Clad-Stainless-Tri-Ply-Cookware/dp/B000X5OC1K?tag=cookinkitchen-20",
   },
   {
     id: 18,
@@ -200,7 +200,7 @@ const reviews = [
     rating: 4.5,
     date: "Dec 20, 2025",
     image: "🫖",
-    amazonLink: "#",
+    amazonLink: "https://www.amazon.com/Bonavita-Electric-Gooseneck-Kettle/dp/B00DGBNOQK?tag=cookinkitchen-20",
   },
 ];
 

@@ -10,7 +10,7 @@ const reviews = [
     rating: 4.8,
     date: "Feb 10, 2026",
     image: "🔪",
-    affiliateLink: "https://amzn.to/EXAMPLE-knife",
+    affiliateLink: "https://www.amazon.com/Victorinox-Fibrox-Pro-Chefs-Knife/dp/B001NBTV2A?tag=cookinkitchen-20",
     content: `
 ## The Search for the Perfect Blade
 
@@ -40,7 +40,7 @@ For those on a budget, the Victorinox Swiss Classic offers incredible value. It'
     rating: 4.5,
     date: "Feb 8, 2026",
     image: "🍳",
-    affiliateLink: "https://amzn.to/EXAMPLE-castiron",
+    affiliateLink: "https://www.amazon.com/Lodge-Cast-Iron-Skillet-12-inch/dp/B00006JSUA?tag=cookinkitchen-20",
     content: `
 ## The Showdown
 
@@ -70,7 +70,7 @@ For most home cooks, carbon steel offers the best balance of performance and usa
     rating: 4.3,
     date: "Feb 5, 2026",
     image: "🫕",
-    affiliateLink: "https://amzn.to/EXAMPLE-instantpot",
+    affiliateLink: "https://www.amazon.com/Instant-Pot-Duo-Electric-Pressure/dp/B00FLBUERN?tag=cookinkitchen-20",
     content: `
 ## Multicooker Madness
 
@@ -100,7 +100,7 @@ For traditional pressure cooking, the Instant Pot wins. For versatility and air-
     rating: 4.7,
     date: "Feb 2, 2026",
     image: "🥣",
-    affiliateLink: "https://amzn.to/EXAMPLE-mixer",
+    affiliateLink: "https://www.amazon.com/KitchenAid-KSM150PSER-Artisan-Tilt-Head-5-Quart/dp/B00005UP77?tag=cookinkitchen-20",
     content: `
 ## Mixing It Up
 
@@ -130,7 +130,7 @@ The KitchenAid Artisan remains the gold standard, but the Cuisinart offers excel
     rating: 4.6,
     date: "Jan 28, 2026",
     image: "🥘",
-    affiliateLink: "https://amzn.to/EXAMPLE-nonstick",
+    affiliateLink: "https://www.amazon.com/T-fal-E93808-Professional-Nonstick-Dishwasher/dp/B000W5XHQW?tag=cookinkitchen-20",
     content: `
 ## The Great Egg Test
 
@@ -163,7 +163,7 @@ For under $30, this pan outperforms many competitors twice its price. It's light
     rating: 4.9,
     date: "Jan 25, 2026",
     image: "🥄",
-    affiliateLink: "https://amzn.to/EXAMPLE-dutchoven",
+    affiliateLink: "https://www.amazon.com/Lodge-Cast-Iron-Dutch-Oven-5-Quart/dp/B000N6ZTBW?tag=cookinkitchen-20",
     content: `
 ## The Braising Champion
 
@@ -199,7 +199,7 @@ If you bake bread, the Le Creuset's weight is essential. For everyday cooking, L
     rating: 4.4,
     date: "Jan 20, 2026",
     image: "⚖️",
-    affiliateLink: "https://amzn.to/EXAMPLE-scale",
+    affiliateLink: "https://www.amazon.com/OXO-Stainless-Compact-Grip-11-Pound/dp/B079D9F86W?tag=cookinkitchen-20",
     content: `
 ## Why You Need a Scale
 
@@ -229,7 +229,7 @@ The OXO Pop Scale balances precision, design, and price perfectly for home baker
     rating: 4.5,
     date: "Jan 15, 2026",
     image: "🪵",
-    affiliateLink: "https://amzn.to/EXAMPLE-board",
+    affiliateLink: "https://www.amazon.com/OXO-GOOD-Grips-Cutting-17-Inch/dp/B00E6GUF5W?tag=cookinkitchen-20",
     content: `
 ## The Board Basics
 
@@ -259,7 +259,7 @@ We recommend having both: a large wood board for vegetables and a dedicated plas
     rating: 4.7,
     date: "Jan 12, 2026",
     image: "🔪",
-    affiliateLink: "https://amzn.to/EXAMPLE-santoku",
+    affiliateLink: "https://www.amazon.com/Shun-DM0706-Classic-7-Inch-Santoku/dp/B0000Y7LYM?tag=cookinkitchen-20",
     content: `
 ## Japanese Precision
 
@@ -288,7 +288,7 @@ Victorinox delivers again with an affordable option that outperforms knives twic
     rating: 4.5,
     date: "Jan 10, 2026",
     image: "🫗",
-    affiliateLink: "https://amzn.to/EXAMPLE-blender",
+    affiliateLink: "https://www.amazon.com/Ninja-BL610-Professional-72-Watt-Blender/dp/B00NG5H436?tag=cookinkitchen-20",
     content: `
 ## The Blender Showdown
 
@@ -315,7 +315,7 @@ The Oster Pro's blender bottle system makes on-the-go smoothies a breeze.
     rating: 4.6,
     date: "Jan 8, 2026",
     image: "☕",
-    affiliateLink: "https://amzn.to/EXAMPLE-coffee",
+    affiliateLink: "https://www.amazon.com/Technivorm-Moccamaster-10-Cup-Coffee-Brewer/dp/B07CM5H7BQ?tag=cookinkitchen-20",
     content: `
 ## Brewing Excellence
 
@@ -375,7 +375,7 @@ Affordable and reliable, Cosori offers great results without breaking the bank.
     rating: 4.3,
     date: "Jan 3, 2026",
     image: "⚡",
-    affiliateLink: "https://amzn.to/EXAMPLE-sharpener",
+    affiliateLink: "https://www.amazon.com/ChefsChoice-15-Inch-Conventional-Sharpener/dp/B00004S7I8?tag=cookinkitchen-20",
     content: `
 ## Keep Your Blades Sharp
 
@@ -402,7 +402,7 @@ Affordable and effective for quick touch-ups between full sharpenings.
     rating: 4.2,
     date: "Jan 1, 2026",
     image: "🥣",
-    affiliateLink: "https://amzn.to/EXAMPLE-strainer",
+    affiliateLink: "https://www.amazon.com/Cuisinox-Stainless-Steel-Strainer/dp/B0002H7F9E?tag=cookinkitchen-20",
     content: `
 ## Essential Kitchen Tools
 
@@ -429,7 +429,7 @@ Multiple sizes cover all your straining needs.
     rating: 4.4,
     date: "Dec 28, 2025",
     image: "🧪",
-    affiliateLink: "https://amzn.to/EXAMPLE-measuring",
+    affiliateLink: "https://www.amazon.com/OXO-GOOD-Grips-Measuring-Cups/dp/B00GE6NF6G?tag=cookinkitchen-20",
     content: `
 ## Measure Right
 
@@ -456,7 +456,7 @@ Everything you need in one comprehensive set.
     rating: 4.5,
     date: "Dec 25, 2025",
     image: "🥄",
-    affiliateLink: "https://amzn.to/EXAMPLE-spatula",
+    affiliateLink: "https://www.amazon.com/Stainless-Steel-Spatula-Set-Utensil/dp/B07XJ8C8F5?tag=cookinkitchen-20",
     content: `
 ## Essential Tools
 
@@ -483,7 +483,7 @@ This set includes everything you need and lasts forever.
     rating: 4.7,
     date: "Dec 22, 2025",
     image: "🍳",
-    affiliateLink: "https://amzn.to/EXAMPLE-fryingpan",
+    affiliateLink: "https://www.amazon.com/All-Clad-Stainless-Tri-Ply-Cookware/dp/B000X5OC1K?tag=cookinkitchen-20",
     content: `
 ## The All-Clad Showdown
 
@@ -510,7 +510,7 @@ Great non-stick performance with the durability of hard anodized aluminum.
     rating: 4.5,
     date: "Dec 20, 2025",
     image: "🫖",
-    affiliateLink: "https://amzn.to/EXAMPLE-kettle",
+    affiliateLink: "https://www.amazon.com/Bonavita-Electric-Gooseneck-Kettle/dp/B00DGBNOQK?tag=cookinkitchen-20",
     content: `
 ## Hot Water on Demand
 
