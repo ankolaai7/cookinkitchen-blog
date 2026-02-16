@@ -107,7 +107,7 @@ const reviews = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-amber-50">
+    <div className="min-h-screen bg-emerald-50">
       {/* Hero with kitchen vibe */}
       <section className="relative bg-gradient-to-r from-stone-800 via-stone-700 to-stone-800 text-white overflow-hidden">
         {/* Decorative elements */}
@@ -127,13 +127,13 @@ export default function Home() {
             <p className="text-lg md:text-xl text-stone-200 mb-4 max-w-2xl mx-auto">
               We test kitchen tools so you don't have to. Real reviews, real results.
             </p>
-            <p className="text-amber-300 mb-8 font-medium">
+            <p className="text-emerald-300 mb-8 font-medium">
               🔥 Fresh reviews added weekly
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="#products" 
-                className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-8 py-4 rounded-lg font-bold hover:from-amber-600 hover:to-orange-600 transition shadow-lg transform hover:scale-105"
+                className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-4 rounded-lg font-bold hover:from-emerald-600 hover:to-teal-600 transition shadow-lg transform hover:scale-105"
               >
                 🛒 Shop Top Rated
               </Link>
@@ -173,22 +173,22 @@ export default function Home() {
             {featuredProducts.map((product, idx) => (
               <div 
                 key={product.name} 
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-amber-100 hover:border-amber-300 transform hover:-translate-y-2"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-emerald-100 hover:border-emerald-300 transform hover:-translate-y-2"
                 style={{animationDelay: `${idx * 0.1}s`}}
               >
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 text-center relative">
+                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 text-center relative">
                   <span className="absolute top-2 right-2 text-2xl animate-pulse">🔥</span>
                   <div className="text-7xl">{product.image}</div>
                 </div>
                 <div className="p-6">
                   {product.badge && (
-                    <span className="inline-block bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
+                    <span className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
                       {product.badge}
                     </span>
                   )}
                   <h3 className="font-bold text-lg text-stone-800 mb-2">{product.name}</h3>
                   <div className="flex items-center gap-2 mb-4">
-                    <span className="text-amber-500 font-bold">★ {product.rating}</span>
+                    <span className="text-emerald-500 font-bold">★ {product.rating}</span>
                     <span className="text-stone-300">|</span>
                     <span className="font-bold text-emerald-600 text-xl">{product.price}</span>
                   </div>
@@ -196,7 +196,7 @@ export default function Home() {
                     href={product.amazonLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white text-center py-3 rounded-xl font-bold hover:from-amber-600 hover:to-orange-600 transition flex items-center justify-center gap-2"
+                    className="block w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-center py-3 rounded-xl font-bold hover:from-emerald-600 hover:to-teal-600 transition flex items-center justify-center gap-2"
                   >
                     🛒 Buy on Amazon
                   </a>
@@ -214,7 +214,7 @@ export default function Home() {
       </section>
 
       {/* Kitchen vibes section */}
-      <section className="py-16 bg-gradient-to-br from-stone-100 to-amber-50">
+      <section className="py-16 bg-gradient-to-br from-stone-100 to-emerald-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="text-6xl mb-4">👨‍🍳</div>
           <h2 className="text-2xl font-bold text-stone-800 mb-4">
@@ -245,13 +245,13 @@ export default function Home() {
               <Link
                 key={review.slug}
                 href={`/reviews/${review.slug}`}
-                className="block bg-gradient-to-br from-amber-50 to-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-amber-200"
+                className="block bg-gradient-to-br from-emerald-50 to-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-emerald-200"
               >
                 <div className="flex items-center gap-2 mb-3">
                   <span className="bg-stone-100 text-stone-600 text-xs font-bold px-3 py-1 rounded-full">
                     {review.category}
                   </span>
-                  <span className="text-amber-500 font-bold">★ {review.rating}</span>
+                  <span className="text-emerald-500 font-bold">★ {review.rating}</span>
                 </div>
                 <div className="text-4xl mb-3">{review.image}</div>
                 <h3 className="font-bold text-stone-800 mb-2">{review.title}</h3>
@@ -264,7 +264,7 @@ export default function Home() {
           </div>
           
           <div className="text-center mt-8">
-            <Link href="/reviews" className="inline-block bg-gradient-to-r from-amber-500 to-orange-500 text-white px-8 py-3 rounded-xl font-bold hover:from-amber-600 hover:to-orange-600 transition">
+            <Link href="/reviews" className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-3 rounded-xl font-bold hover:from-emerald-600 hover:to-teal-600 transition">
               View All Reviews →
             </Link>
           </div>
@@ -272,7 +272,7 @@ export default function Home() {
       </section>
 
       {/* Category bubbles */}
-      <section className="py-12 bg-gradient-to-r from-amber-500 to-orange-500">
+      <section className="py-12 bg-gradient-to-r from-emerald-500 to-teal-500">
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-4">
             {[
@@ -317,7 +317,7 @@ export default function Home() {
           </p>
           <a 
             href="mailto:hello@cookinkitchen.online" 
-            className="inline-block bg-gradient-to-r from-amber-500 to-orange-500 text-white px-8 py-4 rounded-xl font-bold hover:from-amber-600 hover:to-orange-600 transition"
+            className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-4 rounded-xl font-bold hover:from-emerald-600 hover:to-teal-600 transition"
           >
             📧 Request a Review
           </a>

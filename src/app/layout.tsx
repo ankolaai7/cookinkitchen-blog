@@ -92,16 +92,16 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased pattern-bg">
-        <header className="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <header className="bg-white/90 backdrop-blur-lg border-b border-gray-100 sticky top-0 z-50 shadow-sm">
           <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Link href="/" className="font-serif text-2xl font-bold text-stone-800 hover:text-orange-600 transition-colors">
-              <span className="text-3xl">🍳</span> CookinKitchen
+            <Link href="/" className="font-serif text-2xl font-bold text-gray-900 hover:text-teal-600 transition-colors">
+              <span className="text-3xl">🍳</span> <span className="bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">CookinKitchen</span>
             </Link>
             <div className="flex gap-8 text-sm font-medium">
-              <Link href="/" className="animated-link text-stone-600 hover:text-orange-600 transition">Home</Link>
-              <Link href="/reviews" className="animated-link text-stone-600 hover:text-orange-600 transition">Reviews</Link>
-              <Link href="/blog" className="animated-link text-stone-600 hover:text-orange-600 transition">Blog</Link>
-              <Link href="/buying-guides" className="animated-link text-stone-600 hover:text-orange-600 transition">Guides</Link>
+              <Link href="/" className="animated-link text-gray-600 hover:text-teal-600 transition">Home</Link>
+              <Link href="/reviews" className="animated-link text-gray-600 hover:text-teal-600 transition">Reviews</Link>
+              <Link href="/blog" className="animated-link text-gray-600 hover:text-teal-600 transition">Blog</Link>
+              <Link href="/buying-guides" className="animated-link text-gray-600 hover:text-teal-600 transition">Guides</Link>
             </div>
           </nav>
         </header>

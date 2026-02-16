@@ -208,10 +208,10 @@ const categories = ["All", "Knives", "Cookware", "Appliances", "Gadgets"];
 
 export default function ReviewsPage() {
 const categoryGradients: Record<string, string> = {
-  "Knives": "from-slate-100 to-slate-200",
-  "Cookware": "from-amber-100 to-orange-100",
-  "Appliances": "from-blue-100 to-indigo-100",
-  "Gadgets": "from-emerald-100 to-teal-100",
+  "Knives": "from-slate-100 to-gray-200",
+  "Cookware": "from-teal-50 to-cyan-100",
+  "Appliances": "from-blue-50 to-indigo-100",
+  "Gadgets": "from-violet-50 to-purple-100",
 };
 
 const categoryIcons: Record<string, string> = {
@@ -236,7 +236,7 @@ const categoryIcons: Record<string, string> = {
   };
 
   return (
-    <div className="min-h-screen bg-amber-50 py-12">
+    <div className="min-h-screen bg-emerald-50 py-12">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
@@ -257,7 +257,7 @@ const categoryIcons: Record<string, string> = {
               className={`px-4 py-2 rounded-full text-sm font-medium transition ${
                 activeCategory === cat
                   ? "bg-emerald-600 text-white"
-                  : "bg-white text-stone-600 hover:bg-amber-100 border border-amber-200"
+                  : "bg-white text-stone-600 hover:bg-emerald-100 border border-emerald-200"
               }`}
             >
               {cat}
@@ -271,17 +271,17 @@ const categoryIcons: Record<string, string> = {
             <Link
               key={review.id}
               href={`/reviews/${review.slug}`}
-              className="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-amber-300 transform hover:-translate-y-2 cursor-pointer"
+              className="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-emerald-300 transform hover:-translate-y-2 cursor-pointer"
               style={{animationDelay: `${idx * 0.05}s`}}
             >
-              <div className={`bg-gradient-to-br ${categoryGradients[review.category] || "from-amber-50 to-orange-50"} p-8 text-center relative overflow-hidden`}>
+              <div className={`bg-gradient-to-br ${categoryGradients[review.category] || "from-emerald-50 to-teal-50"} p-8 text-center relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 <div className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">{review.image}</div>
                 <div className="text-sm font-medium text-stone-500">{categoryIcons[review.category] || "⭐"}</div>
               </div>
               <div className="p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-bold">
+                  <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold">
                     {review.category}
                   </span>
                   <div className="flex items-center gap-1">
@@ -289,7 +289,7 @@ const categoryIcons: Record<string, string> = {
                     <span className="text-sm font-bold text-stone-700">{review.rating}</span>
                   </div>
                 </div>
-                <h2 className="font-bold text-lg text-stone-900 mb-2 group-hover:text-amber-600 transition-colors duration-300">
+                <h2 className="font-bold text-lg text-stone-900 mb-2 group-hover:text-emerald-600 transition-colors duration-300">
                   {review.title}
                 </h2>
                 <p className="text-stone-500 text-sm mb-4 line-clamp-2">

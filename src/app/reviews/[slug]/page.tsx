@@ -560,11 +560,11 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
             <span className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-lato font-medium">
               {review.category}
             </span>
-            <span className="font-lato text-amber-500 font-bold">★ {review.rating}</span>
+            <span className="font-lato text-emerald-500 font-bold">★ {review.rating}</span>
             <span className="font-lato text-stone-400 text-sm">{review.date}</span>
           </div>
           
-          <div className="bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 rounded-2xl p-10 text-center mb-8 shadow-inner">
+          <div className="bg-gradient-to-br from-emerald-50 via-teal-50 to-rose-50 rounded-2xl p-10 text-center mb-8 shadow-inner">
             <div className="text-6xl mb-4">{review.image}</div>
             <div className="text-sm text-stone-500 font-lato">Tested & Recommended</div>
           </div>
