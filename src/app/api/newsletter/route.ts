@@ -10,9 +10,9 @@ export async function POST(request: Request) {
   // Mailchimp API configuration
   const API_KEY = process.env.MAILCHIMP_API_KEY;
   const LIST_ID = process.env.MAILCHIMP_LIST_ID;
-  const DATACENTER = API_KEY ? API_KEY.split('-')[1] : null;
+  const DATACENTER = 'us6'; // Hardcoded for now
 
-  if (!API_KEY || !LIST_ID || !DATACENTER) {
+  if (!API_KEY || !LIST_ID) {
     // For demo: just log and return success
     console.log('Newsletter signup (demo mode):', email);
     return NextResponse.json({ success: true, message: 'Subscribed! (demo mode)' });
