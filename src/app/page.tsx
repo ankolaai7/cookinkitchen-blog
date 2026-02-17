@@ -1,11 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const featuredProducts = [
   {
     name: "Victorinox Chef's Knife",
     price: "$39.99",
     rating: 4.8,
-    image: "🔪",
+    image: "https://images-na.ssl-images-amazon.com/images/I/61Q5t2a4YGL._AC_SL1000_.jpg",
     slug: "best-chef-knives-home-cooks",
     badge: "Best Seller",
     amazonLink: "https://www.amazon.com/Victorinox-Fibrox-Pro-Chefs-Knife/dp/B001NBTV2A?tag=cookinkitchen-20",
@@ -14,7 +15,7 @@ const featuredProducts = [
     name: "Lodge Dutch Oven",
     price: "$59.99",
     rating: 4.9,
-    image: "🥄",
+    image: "https://images-na.ssl-images-amazon.com/images/I/71VyV6m4U6L._AC_SL1200_.jpg",
     slug: "best-dutch-oven",
     badge: "Best Value",
     amazonLink: "https://www.amazon.com/Lodge-Cast-Iron-Dutch-Oven-5-Quart/dp/B000N6ZTBW?tag=cookinkitchen-20",
@@ -23,7 +24,7 @@ const featuredProducts = [
     name: "KitchenAid Stand Mixer",
     price: "$449.99",
     rating: 4.8,
-    image: "🥣",
+    image: "https://images-na.ssl-images-amazon.com/images/I/81WcVFU5KZL._AC_SL1500_.jpg",
     slug: "kitchenaid-vs-cuisinart-stand-mixer",
     amazonLink: "https://www.amazon.com/KitchenAid-KSM150PSER-Artisan-Tilt-Head-5-Quart/dp/B00005UP77?tag=cookinkitchen-20",
   },
@@ -31,7 +32,7 @@ const featuredProducts = [
     name: "Shun Santoku Knife",
     price: "$169.95",
     rating: 4.7,
-    image: "🔪",
+    image: "https://images-na.ssl-images-amazon.com/images/I/81tB6hOS1eL._AC_SL1500_.jpg",
     slug: "best-santoku-knife",
     badge: "Japanese",
     amazonLink: "https://www.amazon.com/Shun-DM0706-Classic-7-Inch-Santoku/dp/B0000Y7LYM?tag=cookinkitchen-20",
@@ -40,7 +41,7 @@ const featuredProducts = [
     name: "Ninja Blender",
     price: "$99.99",
     rating: 4.6,
-    image: "🫗",
+    image: "https://images-na.ssl-images-amazon.com/images/I/71X-qK8RBCL._AC_SL1500_.jpg",
     slug: "best-blender-2026",
     amazonLink: "https://www.amazon.com/Ninja-BL610-Professional-72-Watt-Blender/dp/B00NG5H436?tag=cookinkitchen-20",
   },
@@ -48,7 +49,7 @@ const featuredProducts = [
     name: "Ninja Air Fryer XXL",
     price: "$149.99",
     rating: 4.6,
-    image: "🍟",
+    image: "https://images-na.ssl-images-amazon.com/images/I/71W4u8q6ISS._AC_SL1500_.jpg",
     slug: "best-air-fryer",
     amazonLink: "https://www.amazon.com/Ninja-Digital-4-Quart-Recipe-Creator/dp/B09GB5JTRY?tag=cookinkitchen-20",
   },
@@ -159,8 +160,13 @@ export default function Home() {
                 key={product.name} 
                 className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-stone-200"
               >
-                <div className="bg-stone-100 p-8 text-center">
-                  <div className="text-6xl">{product.image}</div>
+                <div className="bg-white p-4 text-center h-48 flex items-center justify-center relative">
+                  <Image 
+                    src={product.image} 
+                    alt={product.name}
+                    fill
+                    className="object-contain p-2"
+                  />
                 </div>
                 <div className="p-6">
                   {product.badge && (
