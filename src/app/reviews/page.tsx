@@ -279,6 +279,28 @@ const reviews = [
     image: "🍪",
     amazonLink: "https://www.amazon.com/Nordic-Ware-Natural-Commercial-Bakers/dp/B00004OSWA?tag=cookinkitchen-20",
   },
+  {
+    id: 26,
+    slug: "best-knives-under-50",
+    title: "Best Chef's Knives Under $50",
+    excerpt: "Quality doesn't have to be expensive. We tested the best knives for budget-conscious home cooks.",
+    category: "Knives",
+    rating: 4.8,
+    date: "Feb 16, 2026",
+    image: "🔪",
+    amazonLink: "https://www.amazon.com/Victorinox-Fibrox-Pro-Chefs-Knife/dp/B001NBTV2A?tag=cookinkitchen-20",
+  },
+  {
+    id: 27,
+    slug: "best-food-storage-containers",
+    title: "Best Food Storage Containers",
+    excerpt: "Keep food fresh with the best containers. Glass, plastic, and stainless steel tested.",
+    category: "Gadgets",
+    rating: 4.7,
+    date: "Feb 16, 2026",
+    image: "📦",
+    amazonLink: "https://www.amazon.com/OXO-Grips-POP-Container-Set/dp/B00W5IWIZ2?tag=cookinkitchen-20",
+  },
 ];
 
 const categories = ["All", "Knives", "Cookware", "Appliances", "Gadgets", "Kitchen Utensils", "Baking Sheets"];
