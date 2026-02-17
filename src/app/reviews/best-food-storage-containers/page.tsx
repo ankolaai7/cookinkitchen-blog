@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 const products = [
   {
     name: "Pyrex Glass Food Storage Set (18-Piece)",
-    price.99",
-    rating: 4: "$44.8,
+    price: "$44.99",
+    rating: 4.8,
     image: "🫙",
     link: "https://www.amazon.com/Pyrex-18-Piece-Smart-Seal/dp/B000HHM1WS?tag=cookinkitchen-20",
     pros: ["Glass is microwave-safe", "BPA-free", "Stackable", "Oven safe"],
