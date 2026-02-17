@@ -62,7 +62,7 @@ const reviews = [
     slug: "best-chef-knives-home-cooks",
     category: "Knives",
     rating: 4.8,
-    image: "🔪",
+    image: "https://images-na.ssl-images-amazon.com/images/I/61Q5t2a4YGL._AC_SL1000_.jpg",
   },
   {
     title: "Dutch Oven Comparison",
@@ -70,7 +70,7 @@ const reviews = [
     slug: "best-dutch-oven",
     category: "Cookware",
     rating: 4.9,
-    image: "🥄",
+    image: "https://images-na.ssl-images-amazon.com/images/I/71VyV6m4U6L._AC_SL1200_.jpg",
   },
   {
     title: "Stand Mixer Showdown",
@@ -78,7 +78,7 @@ const reviews = [
     slug: "kitchenaid-vs-cuisinart-stand-mixer",
     category: "Appliances",
     rating: 4.7,
-    image: "🥣",
+    image: "https://images-na.ssl-images-amazon.com/images/I/81WcVFU5KZL._AC_SL1500_.jpg",
   },
   {
     title: "Best Santoku Knife",
@@ -86,7 +86,7 @@ const reviews = [
     slug: "best-santoku-knife",
     category: "Knives",
     rating: 4.7,
-    image: "🔪",
+    image: "https://images-na.ssl-images-amazon.com/images/I/81tB6hOS1eL._AC_SL1500_.jpg",
   },
   {
     title: "Best Blender Showdown",
@@ -94,7 +94,7 @@ const reviews = [
     slug: "best-blender-2026",
     category: "Appliances",
     rating: 4.5,
-    image: "🫗",
+    image: "https://images-na.ssl-images-amazon.com/images/I/71X-qK8RBCL._AC_SL1500_.jpg",
   },
   {
     title: "Best Air Fryer Review",
@@ -102,7 +102,7 @@ const reviews = [
     slug: "best-air-fryer",
     category: "Appliances",
     rating: 4.4,
-    image: "🍟",
+    image: "https://images-na.ssl-images-amazon.com/images/I/71W4u8q6ISS._AC_SL1500_.jpg",
   },
 ];
 
@@ -247,7 +247,14 @@ export default function Home() {
                   </span>
                   <span className="text-emerald-600 font-bold">★ {review.rating}</span>
                 </div>
-                <div className="text-3xl mb-3">{review.image}</div>
+                <div className="relative h-32 mb-3 w-full">
+                  <Image 
+                    src={review.image} 
+                    alt={review.title}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <h3 className="font-semibold text-stone-800 mb-2">{review.title}</h3>
                 <p className="text-stone-500 text-sm">{review.excerpt}</p>
                 <span className="inline-block mt-4 text-emerald-600 font-medium">
