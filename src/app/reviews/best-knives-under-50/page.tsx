@@ -11,7 +11,7 @@ const products = [
     name: "Victorinox Fibrox Pro 8-Inch Chef's Knife",
     price: "$39.99",
     rating: 4.8,
-    image: "🔪",
+    image: "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=600&h=400&fit=crop",
     link: "https://www.amazon.com/Victorinox-Fibrox-Pro-Chefs-Knife/dp/B001NBTV2A?tag=cookinkitchen-20",
     pros: ["Excellent value", "Fibrox handle provides great grip", "Swiss-made quality", "Dishwasher safe"],
     cons: ["Requires occasional sharpening"],
@@ -20,7 +20,7 @@ const products = [
     name: "Mercer Culinary Genesis 8-Inch Chef's Knife",
     price: "$29.99",
     rating: 4.6,
-    image: "🔪",
+    image: "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=600&h=400&fit=crop",
     link: "https://www.amazon.com/Mercer-Culinary-Genesis-8-Inch-Chefs/dp/B001GCGP1G?tag=cookinkitchen-20",
     pros: ["Very affordable", "High-carbon stainless steel", "Comfortable grip", "Great for beginners"],
     cons: ["Not as durable as premium options"],
@@ -29,7 +29,7 @@ const products = [
     name: "Wüsthof Classic IKON 7-Inch Chef's Knife",
     price: "$44.99",
     rating: 4.7,
-    image: "🔪",
+    image: "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=600&h=400&fit=crop",
     link: "https://www.amazon.com/W%C3%BCsthof-Classic-IKON-Chefs-7-Inch/dp/B000S2D4S2?tag=cookinkitchen-20",
     pros: ["German precision", "Full tang construction", "Beautiful handle", "Holds edge well"],
     cons: ["Slightly shorter blade"],
@@ -38,7 +38,7 @@ const products = [
     name: "Chicago Cutlery 8-Inch Chef's Knife",
     price: "$24.99",
     rating: 4.4,
-    image: "🔪",
+    image: "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=600&h=400&fit=crop",
     link: "https://www.amazon.com/Chicago-Cutlery-8-Inch-Chef-Knife/dp/B00006JSUA?tag=cookinkitchen-20",
     pros: ["Budget-friendly", "Stainless steel", "Lifetime warranty"],
     cons: ["Heavier feel", "Less ergonomic handle"],
@@ -47,7 +47,7 @@ const products = [
     name: "OXO Good Grips 8-Inch Chef's Knife",
     price: "$49.99",
     rating: 4.5,
-    image: "🔪",
+    image: "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=600&h=400&fit=crop",
     link: "https://www.amazon.com/Good-Grips-Stainless-8-Inch-Knife/dp/B000W5XHQW?tag=cookinkitchen-20",
     pros: ["Soft-grip handle", "Non-slip", "Built-in finger guard"],
     cons: ["Slightly above $50", "Not as sharp out of box"],
@@ -84,7 +84,13 @@ export default function BestKnivesUnder50() {
               className="bg-white rounded-2xl p-6 shadow-sm border border-stone-200 hover:shadow-md transition"
             >
               <div className="flex flex-col md:flex-row gap-6">
-                <div className="text-6xl">{product.image}</div>
+                <div className="w-full md:w-48 h-48 relative flex-shrink-0">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 <div className="flex-1">
                   <div className="flex justify-between items-start mb-2">
                     <h2 className="text-xl font-bold text-stone-900">{product.name}</h2>
